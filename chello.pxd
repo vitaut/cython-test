@@ -8,4 +8,4 @@ cdef extern from "mylib.h":
     cdef cppclass foo "foo":
         foo() except +
 
-        optional_field_ref[int] i_ref()
+        optional_field_ref[int&] i_ref()
