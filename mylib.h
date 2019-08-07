@@ -1,12 +1,13 @@
+template <typename T>
 class optional_field_ref {
  private:
-  int& value_;
+  T& value_;
  
  public:
-  explicit optional_field_ref(int& value) : value_(value) {}
+  explicit optional_field_ref(T& value) : value_(value) {}
 
-  void operator=(int value) { value_ = value; }
-  int& value_unchecked() { return value_; }
+  void operator=(T value) { value_ = value; }
+  T& value_unchecked() { return value_; }
 };
 
 class foo {
@@ -14,7 +15,5 @@ class foo {
   int i;
 
  public:
-  optional_field_ref i_ref() { return optional_field_ref(i); }
+  optional_field_ref<int> i_ref() { return optional_field_ref<int>(i); }
 };
-
-int answer();
