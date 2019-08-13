@@ -16,4 +16,5 @@ class foo {
 
  public:
   optional_field_ref<int&> i_ref() { return optional_field_ref<int&>(i); }
+  double d;
 };

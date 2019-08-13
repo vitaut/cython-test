@@ -17,3 +17,11 @@ cdef class foo:
     @i.setter
     def i(self, val):
         self.val.i_ref().assign(val)
+
+    @property
+    def d(self):
+        return self.val.d
+
+    @d.setter
+    def d(self, val):
+        self.val.d = val

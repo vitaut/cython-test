@@ -9,3 +9,4 @@ cdef extern from "mylib.h":
         foo() except +
 
         optional_field_ref[int&] i_ref()
+        double d
